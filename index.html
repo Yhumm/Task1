@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Title of the task -->
+        <title>
+            My First week Task
+        </title>
+
+        <!-- Internal CSS -->
+        <style>
+            fieldset{
+                background-color: bisque;
+                font: bold;
+                border-radius: 25px;
+            }
+
+            legend{
+                font-size: larger;
+                font-weight: bold;
+            }
+
+        </style>
+    </head>
+   <body>
+
+        <script type="text/javascript">
+            function validateForm() {
+                var x = document.forms["my_form"]["email"].value;
+                if (x == " ") {
+                  alert("All fields must be filled out");
+                  return false;
+                }
+              }
+        </script>
+
+        <form name="my_form" action="/action_page.php" onsubmit="return validateForm()" method="post" >
+            <fieldset>
+                <legend>Biodata</legend>
+                <p>
+                    <label for="Fullname">Name</label>
+                    <input type="text" name="Fullname" id="Fullname" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" required>
+                </p>
+                <p>
+                    <label for="pwd">Enter Password</label>
+                    <input type="password" name="pwd" id="pwd" required>
+
+                    <label for="Phone_Number">Phone Number</label>
+                    <input type="tel" name="Phone_Number" id="Phone_Number" required>
+                </p>
+
+                <div>
+                    <p>Gender:
+                        <label for="sex">Male</label>
+                        <input type="radio" name="Male" id="sex">
+    
+                        <label for="sex">Female</label>
+                        <input type="radio" name="Female" id="sex">
+                    </p>
+                   
+                </div>
+            
+                <input type="button" value="Submit">
+
+            </fieldset>
+
+              
+        </form>
+
+   </body>
+
+
+</html>
