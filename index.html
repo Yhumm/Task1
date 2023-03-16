@@ -23,32 +23,32 @@
     </head>
    <body>
 
-        <script type="text/javascript">
+        <script>
             function validateForm() {
-                var x = document.forms["my_form"]["email"].value;
-                if (x == " ") {
+                var x = document.forms["my_form"]["mail"].value;
+                if (x == "" || x == null) {
                   alert("All fields must be filled out");
                   return false;
                 }
               }
         </script>
 
-        <form name="my_form" action="/action_page.php" onsubmit="return validateForm()" method="post" >
+        <form name="my_form"  method="#" onsubmit="return validateForm()" required>
             <fieldset>
                 <legend>Biodata</legend>
                 <p>
                     <label for="Fullname">Name</label>
-                    <input type="text" name="Fullname" id="Fullname" required>
+                    <input type="text" required name="Fullname" id="Fullname" >
 
                     <label for="email">Email</label>
-                    <input type="email" name="email" id="email" required>
+                    <input type="email" required name="mail" id="email" >
                 </p>
                 <p>
                     <label for="pwd">Enter Password</label>
-                    <input type="password" name="pwd" id="pwd" required>
+                    <input type="password" required name="pwd" id="pwd">
 
                     <label for="Phone_Number">Phone Number</label>
-                    <input type="tel" name="Phone_Number" id="Phone_Number" required>
+                    <input type="tel" required name="Phone_Number" id="Phone_Number">
                 </p>
 
                 <div>
@@ -62,7 +62,7 @@
                    
                 </div>
             
-                <input type="button" value="Submit">
+                <input type="submit" value="Submit">
 
             </fieldset>
 
